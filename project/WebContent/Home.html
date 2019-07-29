@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.forgot{
+margin-left:100px;
+margin-bottom:0px;
+margin-right:0px;
+margin-top:-33px;
+font-size:18px;
+ }
+</style>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body background="download2.jpg"> 
+<div class=" text-center">
+  <h1 class="display-3 text-white"> Welcome </h1><br>
+  <p class="text-white display-3"><b>Virtusa Recruitment Processing System</b></p>
+</div>
+<div class="container-fulid">
+  <br>
+  <!-- Nav tabs -->
+  <ul class="row nav nav-tabs " role="tablist">
+    <li class="col nav-item ">
+      <a class="btn-lg nav-link active btn  btn-primary text-white" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="col nav-item">
+      <a class="btn-lg nav-link btn btn-success text-white" data-toggle="tab" href="#Admin">Admin</a>
+    </li>
+    <li class="col nav-item">
+      <a class="btn-lg nav-link btn btn-warning text-white" data-toggle="tab" href="#Login">Login</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+     <h2 class="text-white">Virtusa Corporation is an American information technology services company founded in 1996 in Sri Lanka and has its headquarters in Southborough, Massachusetts, United States. The company provides IT consulting, business consulting, systems implementation and application outsourcing services to large enterprises and software vendors.</h2>
+    </div>
+    
+    <div id="Admin" class="container tab-pane fade"><br>
+     <form action="AdminServlet" method="post">
+    <div class="form-group">
+      <label for="employeeId" class="text-white">Employee Id:</label>
+      <input type="text" class="form-control" name="empid" placeholder="Enter Employee id" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd" class="text-white">Password:</label>
+      <input type="password" class="form-control" name="pwd" placeholder="Enter password"  required>
+    </div>
+    
+    <div class="form-group form-check">
+      <label class="form-check-label text-white">
+        <input class="form-check-input text-white" type="checkbox" name="remember"> Remember me
+      </label>
+     <div class="forgot">
+    <a class="nav nav-link text-danger " data-toggle="tab" href="#" id="forgot">ForgotPassword</a>
+    </div>
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+    </div>
+    
+   <div id="Login" class="container tab-pane fade"><br>
+   <form action="LoginServlet" method="post">
+    <div class="form-group">
+      <label for="employeeId" class="text-white">Employee Id:</label>
+      <input type="text" class="form-control" name="empid" placeholder="Enter Employee Id"  required>
+    </div>
+    <div class="form-group">
+      <label for="pwd" class="text-white">Password:</label>
+      <input type="password" class="form-control" name="pwd" placeholder="Enter password" required>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label text-white">
+        <input class="form-check-input" type="checkbox" name="remember" > Remember me
+      </label> 
+      <div class="forgot">
+    <a class="nav nav-link text-dark " data-toggle="tab" href="#" id="forgot">ForgotPassword</a>
+    </div>
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+    </div>
+  </div>
+</body>
+</html>
